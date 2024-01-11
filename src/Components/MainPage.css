@@ -1,0 +1,103 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.card {
+  width: 350px;
+}
+
+.card.hill-range,
+.card.nature {
+  width: calc(350px - 20px); /* Display two cards in a row with some spacing */
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .card.hill-range,
+  .card.nature {
+    width: 100%; /* For responsive layout, display each card in full width on smaller screens */
+  }
+}
+
+
+/* Additional styles for nested container */
+.nature-hill-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+.container {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: rgb(13, 13, 13);
+  width: 200px;
+  font-size: 18px;
+  font-family: 'Open Sans';
+  padding: 16px 32px; /* Adjust the padding */
+}
+
+
+.secondary-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.secondary-cards .card {
+  width: 350px; /* Or adjust as necessary */
+}
+
+@media (max-width: 768px) {
+  .secondary-cards .card {
+    width: 100%; /* For responsive layout */
+  }
+}
+.main p {
+  font-family: 'Sofia', sans-serif;
+  text-shadow: 3px 3px 3px #ababab;
+  font-size: 20px;
+  color: rgb(8, 8, 8);
+  text-decoration: none; /* This line will remove the underline */
+  text-align: center; 
+ }
+ .nav-link {
+  text-decoration: none;
+ }
+
